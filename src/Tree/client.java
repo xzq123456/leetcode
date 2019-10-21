@@ -2,7 +2,6 @@ package Tree;
 
 import org.junit.Before;
 import org.junit.Test;
-import sun.reflect.generics.tree.Tree;
 
 public class client {
     int arr[];
@@ -15,9 +14,12 @@ public class client {
     public  void testinit(){
         init();
         root=TreeNode.createTree(arr,0,arr.length-1);
-        TreeNode.PreTravel(root);
-        System.out.println();
-        TreeNode.NondiGuiPreTravel(root);
+//        TreeNode.PreTravel(root);
+//        System.out.println();
+//        TreeNode.NondiGuiPreTravel(root);
+          TreeNode.NonDiGuiMidTravel(root);
     }
+
+
 
 }
