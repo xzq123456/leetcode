@@ -2,6 +2,8 @@ package Tree;
 
 import sun.reflect.generics.tree.Tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -58,6 +60,20 @@ public class TreeNode {
                 stack.push(p.right);
             if(p.left!=null)
                 stack.push(p.left);
+        }
+    }
+    public static  void cengci(TreeNode root){
+        if(root!=null){
+            Queue<TreeNode> queue=new LinkedList<>();
+            queue.add(root);
+            while(!queue.isEmpty()){
+                TreeNode p=queue.poll();
+                System.out.print(p.val+" ");
+                if(p.left!=null)
+                    queue.add(p.left);
+                if(p.right!=null)
+                    queue.add(p.right);
+            }
         }
     }
     public  static  void NonDiGuiMidTravel(TreeNode root){
