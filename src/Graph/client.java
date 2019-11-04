@@ -71,6 +71,7 @@ public class client {
         init();
         System.out.println(g.top(g));
     }
+    //BFS最短路径
     @Test
     public  void testFindNear(){
         init();
@@ -78,5 +79,11 @@ public class client {
         for(int i=0;i<g.u.length;i++){
             System.out.print(g.u[i]+" ");
         }
+    }
+    @Test
+    public void testNumOfGraph(){
+        init();
+        System.out.println("--------------");
+        System.out.println(g.NumofGraph(g));
     }
 }

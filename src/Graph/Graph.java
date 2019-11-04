@@ -106,4 +106,14 @@ public class Graph {
 
         }
     }
+    public int NumofGraph(Graph g){
+        int count=0;
+        for(int i=0;i<g.n;i++){
+            if(g.visit[i]==0){
+            DFS(g,i);
+             count++;
+            }
+        }
+        return count;
+    }
 }
