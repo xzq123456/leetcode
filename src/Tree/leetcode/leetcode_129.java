@@ -3,6 +3,7 @@ package Tree.leetcode;
 import Tree.TreeNode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Stack;
 
@@ -71,8 +72,8 @@ public class leetcode_129 {
         return sum;
     }
     public static void main(String[] args) {
-        TreeNode root= TreeNode.createTreeByInput();
-        System.out.println(sumNumbers(root));
+//        TreeNode root= TreeNode.createTreeByInput();
+//        System.out.println(sumNumbers(root));
 
     }
 }

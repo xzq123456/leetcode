@@ -48,5 +48,6 @@ public class leetcode_150 {
 
       String [] tokens=new String[]{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
         System.out.println(evalRPN(tokens));
+        Stack stack=new Stack();
     }
 }
