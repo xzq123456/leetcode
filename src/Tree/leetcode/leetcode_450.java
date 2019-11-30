@@ -6,11 +6,11 @@ import Tree.TreeNode;
  * 450. 删除二叉搜索树中的节点
  * 难度：中等
  * 思路：判断当前节点值小于key，则在右子树中找
- *           当前节点值大于key，则在左子树中找
- *           等于key
- *              1.当前节点没有左子树，那就返回右子树作为新的根
- *              2.当前节点没有右子树，返回左子树作为新的根
- *              3.左右子树都有，就找到右子树最小值对应的节点（保存），然后删除它
+ * 当前节点值大于key，则在左子树中找
+ * 等于key
+ * 1.当前节点没有左子树，那就返回右子树作为新的根
+ * 2.当前节点没有右子树，返回左子树作为新的根
+ * 3.左右子树都有，就找到右子树最小值对应的节点（保存），然后删除它
  */
 public class leetcode_450 {
     public TreeNode deleteNode(TreeNode root, int key) {
@@ -42,6 +42,7 @@ public class leetcode_450 {
             }
         }
     }
+
     //找到某子树的最小值的节点（一致向左，直到为nullnull）
     private TreeNode min(TreeNode node) {
         if (node.left == null) {
@@ -49,6 +50,7 @@ public class leetcode_450 {
         }
         return min(node.left);
     }
+
     //删除某子树的最小值
     private TreeNode deleteMin(TreeNode node) {
         if (node.left == null) {
